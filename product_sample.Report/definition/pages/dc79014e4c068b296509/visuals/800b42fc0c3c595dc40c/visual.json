@@ -1,0 +1,160 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "800b42fc0c3c595dc40c",
+  "position": {
+    "x": 111.14960049582071,
+    "y": 50.77203973265884,
+    "z": 0,
+    "height": 267.58237156401282,
+    "width": 493.99822442586981,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "sample_sales_dataset"
+                    }
+                  },
+                  "Property": "Category"
+                }
+              },
+              "queryRef": "sample_sales_dataset.Category",
+              "nativeQueryRef": "Category"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "sample_sales_dataset"
+                    }
+                  },
+                  "Property": "Customer"
+                }
+              },
+              "queryRef": "sample_sales_dataset.Customer",
+              "nativeQueryRef": "Customer"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "sample_sales_dataset"
+                        }
+                      },
+                      "Property": "Quantity"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(sample_sales_dataset.Quantity)",
+              "nativeQueryRef": "Sum of Quantity"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "sample_sales_dataset"
+                        }
+                      },
+                      "Property": "Total_Amount"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(sample_sales_dataset.Total_Amount)",
+              "nativeQueryRef": "Sum of Total_Amount"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0da17ec361e311de41e0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "sample_sales_dataset"
+              }
+            },
+            "Property": "Category"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c9bd71da2b00a128e524",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "sample_sales_dataset"
+              }
+            },
+            "Property": "Customer"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "86ae0de677e7462d81c6",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "sample_sales_dataset"
+                  }
+                },
+                "Property": "Quantity"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "854d2b367431d9002772",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "sample_sales_dataset"
+                  }
+                },
+                "Property": "Total_Amount"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
